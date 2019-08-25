@@ -1,0 +1,93 @@
+.page {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Fira Sans';
+}
+.title {
+    width: 216px;
+    height: 39px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.accordion {
+    width: 460px;
+}
+
+.item:first-child, .item + .item:not(:last-child){
+    margin-bottom: 10px;
+}
+
+ /* темносерый */
+.head {
+    position: relative;
+    background-color: #696666;
+    padding: 10px;
+    padding-left: 15px;
+    color: #FFFFFF;
+    border-radius: 20px;
+}
+
+/* светлосерый  */
+.head.even {
+    background-color: #E7E7E7;
+    color: #696666;
+}
+
+ /*  рыжий */
+.head.active {
+    background-color: #FF8663;
+}
+
+.head::after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    border: 8px solid transparent;
+    border-top: 8px solid white;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.body {
+    position: relative;
+    z-index: -100;
+    display: none;
+    background-color: #E7E7E7;
+    padding-top: 30px;
+    padding-bottom: 1px;
+    margin-top: -20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.active + .body {
+    display: block;
+}
+
+ul  {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-top: 0;
+    color: #696666;
+}
+
+li:first-child, li + li:not(:last-child) {
+    margin-bottom: 10px;
+
+}
+
+
+/*
+Активный #FF8663
+светлосерый #E7
+темносерый  #696666
+*/
