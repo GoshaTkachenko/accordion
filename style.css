@@ -38,6 +38,7 @@
  /*  рыжий */
 .head.active {
     background-color: #FF8663;
+    color: #FFF;
 }
 
 .head::after {
@@ -82,7 +83,6 @@ ul  {
 
 li:first-child, li + li:not(:last-child) {
     margin-bottom: 10px;
-
 }
 
 
